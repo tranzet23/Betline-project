@@ -1,0 +1,49 @@
+.menu-btn {
+  @include flex-v-center;
+  justify-content: space-between;
+
+  &__burger {
+    width: 21px;
+    height: 21px;
+    margin-right: 20px;
+    transform: rotate(0deg);
+    transition: transform .3s ease-in-out;
+
+    @include mobile {
+      margin-right: 0;
+    }
+  }
+
+  &__burger-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: -1.5px;
+  }
+
+  &__burger-el {
+    display: inline-block;
+    margin: 1.5px;
+    background: $color-primary;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    transition: all .3s ease-in-out;
+
+    &:nth-child(2n) {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &.menu-btn--open .menu-btn__burger {
+    transform: rotate(90deg);
+  }
+
+  &.menu-btn--open .menu-btn__burger-el {
+    &:nth-child(2n) {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+}

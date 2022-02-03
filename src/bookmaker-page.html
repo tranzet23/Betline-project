@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="resources/favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>BetLine</title>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+<div class="site-container">
+  <div class="big-bg big-bg--bookmaker-header ">
+    <div class="top-wrapper">
+      @include('partials/header.html')
+      @include('partials/menu-pc.html')
+      @include('partials/hero__bookmaker-page.html')
+      <div class="scroll-hint scroll-hint--about-page">
+        <div class="scroll-hint__text">scroll</div>
+        <img class="scroll-hint__arrow" src="img/arrow-down.png" alt="">
+      </div>
+    </div>
+    <div class="parallax  hero__parallax-item--bookmaker-page">
+      <img class="" src="img/parallax/2_dollars.png" data-depth="0.6" alt="">
+    </div>
+  </div>
+  <div class="bookmaker-page__wrap">
+  @include('partials/advantages__bookmaker-page.html')
+  </div>
+  <div class="bookmaker-page__wrap">
+  <div class="big-bg big-bg--bookmaker-bottom">
+
+      @include('partials/price.html')
+      @include('partials/business--about-page.html')
+      @include('partials/contacts.html')
+
+    @include('partials/footer.html')
+  </div>
+  </div>
+  @include('partials/modals.html')
+</div>
+<script src="js/vendor.js"></script>
+<script src="js/global.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/accordion.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+.price {
+  padding-top: 175px;
+  position: relative;
+
+  @include mobile {
+    padding-top: 60px;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+
+    @include tablet {
+      justify-content: center;
+    }
+  }
+
+  .business__text {
+    max-width: 572px;
+  }
+}
+
+.bookmaker__parallax-item2 {
+  top: -6%;
+  right: -26%;
+
+  @include mobile {
+    top: -6%;
+    left: -6%;
+    width: 30%;
+  }
+}
+.bookmaker__parallax-item1 {
+  left: -270px;
+  top: -90px;
+  width: 20%;
+}

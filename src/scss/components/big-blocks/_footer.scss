@@ -1,0 +1,144 @@
+.footer {
+  position: relative;
+  margin-top: 12px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  border: 1px solid #39363b;
+
+  @include mobile {
+    background: $color-black;
+  }
+  @include media-max(520) {
+    margin-top: 0;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    background-color: #000000;
+    opacity: 0.67;
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__sub-text {
+    color: $color-gray-light2;
+    font-size: 18px;
+    margin-top: 54px;
+
+    @include tablet {
+      margin-top: 0;
+      padding-top: 45px;
+    }
+  }
+
+  &__links {
+    font-size: 18px;
+    color: $color-gray-light2;
+    transition: .3s;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    padding-left: 90px;
+
+    &:first-child {
+      padding-left: 0 !important;
+    }
+
+    @include media-max(1300) {
+      padding-left: 50px;
+    }
+
+    @include media-max(1100) {
+      padding-left: 35px;
+    }
+
+    &:nth-child(2) {
+      @include  tablet {
+        order: 3;
+      }
+    }
+
+    &:nth-child(3) {
+      @include tablet {
+        margin-top: 20px;
+        order: 4;
+      }
+    }
+
+    &:nth-child(4) {
+      @include tablet {
+        order: 2;
+      }
+    }
+
+    @include tablet {
+      padding-left: 0;
+      text-align: center;
+    }
+  }
+
+  &__contact .footer__tel {
+    font-size: 22px;
+    padding-left: 40px;
+    margin-bottom: 20px;
+
+    @include tablet {
+      padding-top: 49px;
+      padding-left: 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  @include tablet {
+    padding-top: 77px;
+    padding-bottom: 66px;
+  }
+
+  &__sub-text-pc {
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__sub-text-mob {
+    display: none;
+
+    @include tablet {
+      display: block;
+      padding-top: 40px;
+    }
+  }
+
+  .callback-btn {
+
+    @include tablet {
+      margin: 0 auto 42px auto;
+
+    }
+  }
+}

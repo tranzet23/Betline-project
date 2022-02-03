@@ -1,0 +1,66 @@
+.scroll-hint {
+  @include absolute-h-center;
+  @include flex-v-center;
+
+
+  bottom: 20px;
+  text-align: center;
+  writing-mode: tb-rl;
+  cursor: default;
+
+
+  &__text {
+    margin-bottom: 25px;
+    font-size: 20px;
+    color: $color-gray-dark2;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &--about-page {
+    bottom: -43%;
+  }
+
+  &__arrow {
+    animation: slideArrow 2s ease-in infinite;
+  }
+
+  @include media-max (1250) {
+    right: 25px;
+  }
+
+  @include media-max(1200) {
+    top: 70%;
+  }
+
+  @include media-max(767) {
+    @include absolute-h-center;
+
+    right: initial;
+    top: initial;
+    bottom: -440px;
+    display: flex;
+    flex-direction: column;
+    writing-mode: initial;
+  }
+
+  @include mobile {
+    bottom: 0;
+  }
+
+  @keyframes slideArrow {
+    0% {
+      transform: translateY(-4px);
+    }
+
+    50% {
+      transform: translateY(0);
+    }
+
+    100% {
+      transform: translateY(-4px);
+    }
+  }
+}

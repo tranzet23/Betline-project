@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="resources/favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>BetLine</title>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+<div class="site-container">
+  <div class="casino-page">
+  <div class="big-bg big-bg--casino-top">
+    <div class="top-wrapper">
+      @include('partials/header.html')
+      @include('partials/menu-pc.html')
+      @include('partials/hero__casino-page.html')
+      <div class="scroll-hint scroll-hint--about-page">
+        <div class="scroll-hint__text">scroll</div>
+        <img class="scroll-hint__arrow" src="img/arrow-down.png" alt="">
+      </div>
+    </div>
+  </div>
+  @include('partials/advantages__casino-page.html')
+
+  <div class="big-bg big-bg--casino-bottom">
+
+      @include('partials/price__casino-page.html')
+      @include('partials/business--about-page.html')
+      @include('partials/contacts.html')
+
+    @include('partials/footer.html')
+  </div>
+  </div>
+
+  @include('partials/modals.html')
+</div>
+<script src="js/vendor.js"></script>
+<script src="js/global.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/accordion.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+</html>

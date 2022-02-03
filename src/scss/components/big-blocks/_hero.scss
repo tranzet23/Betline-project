@@ -1,0 +1,81 @@
+.hero {
+  &__inner {
+    padding-top: 88px;
+
+    @include mobile {
+      padding-top: 55px;
+    }
+
+    &--about-page {
+      max-width: 759px;
+      width: 100%;
+      margin: 0 auto;
+      line-height: 28px;
+    }
+
+    &--bookmaker-page {
+      max-width: 795px;
+    }
+  }
+
+  &__title {
+    position: relative;
+    margin: 0 auto 32px;
+    max-width: 995px;
+    text-align: center;
+
+    @include tablet {
+      margin: 0 auto 25px;
+    }
+  }
+
+  &__parallax-item {
+    right: 77px;
+    top: -75px;
+
+
+    &--about-page {
+      right: 40px;
+      top: -75px;
+
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    &--bookmaker-page {
+      top: 545px;
+      left: 0;
+
+      @include mobile {
+        top: 705px;
+        left: 0;
+        width: 20%;
+      }
+    }
+  }
+
+  &__action-block {
+    margin: 50px auto;
+
+    @include mobile {
+      height: 237px !important;
+      flex-direction: column-reverse;
+      max-width: 329px;
+      width: 100% !important;
+    }
+  }
+
+
+  &__parallax-item {
+
+    @include media-max(1360) {
+        right: 0;
+      }
+
+    @include tablet {
+      display: none;
+    }
+  }
+}

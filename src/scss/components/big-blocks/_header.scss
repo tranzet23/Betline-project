@@ -1,0 +1,110 @@
+.header {
+  padding-top: 74px;
+  position: relative;
+  z-index: 99;
+
+  @include tablet {
+    padding-top: 32px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    min-height: 54px;
+
+    > * {
+      @include flex-v-center;
+    }
+  }
+
+  &__nav-separator {
+    margin: 0 34px 0 39px;
+    width: 1px;
+    height: 23px;
+    background-color: #332d2e;
+
+    @include media-max(1250) {
+      display: none;
+    }
+  }
+
+  &__socials {
+    @include flex-v-center;
+
+    @include media-max(1250) {
+      display: none;
+    }
+
+    .socials__text {
+      padding-right: 35px;
+    }
+  }
+
+
+
+  &__tel {
+    font-size: 22px;
+    letter-spacing: -1.15px;
+
+    &-pc {
+      @include media-max(1250) {
+        display: none;
+      }
+    }
+  }
+
+  .callback-btn {
+
+    @include media-max(1250) {
+      margin-right: 0;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  .container {
+    @include media-max(1250) {
+      padding: 0 22px;
+    }
+  }
+
+  &__logo-img {
+    height: 18px;
+    width: 193px
+  }
+
+
+  &__tel-mob {
+    display: none;
+
+    @include mobile {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .header__nav {
+
+    @include media-max(1250) {
+      width: 233px;
+    }
+
+    @include mobile {
+      width: auto;
+    }
+  }
+}
+
+button.btn-default.menu-btn {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+span.menu-btn__text {
+
+  @include mobile {
+    display: none;
+  }
+}

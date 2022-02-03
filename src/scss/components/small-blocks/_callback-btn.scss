@@ -1,0 +1,37 @@
+.callback-btn {
+  @include flex-all-center;
+  @include figured-block(3.5%);
+  @include size(233px, 54px);
+
+  margin-right: 54px;
+  box-shadow:
+    0 17px 54px rgba(0, 0, 0, 0.17),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    inset 1px 0 0 rgba(255, 255, 255, 0.05),
+    inset -1px 0 0 rgba(255, 255, 255, 0.05),
+    inset 0 0 16px rgba(255, 250, 227, 0.05);
+
+  &:hover, .callback-btn:active {
+    box-shadow: 0 17px 54px rgba(0, 0, 0, 0.17);
+    border: 1px solid #38267a;
+  }
+
+  &__text {
+    @include flex-all-center;
+
+    position: relative;
+    font-size: 16px;
+    letter-spacing: -0.32px;
+
+    &::before {
+      $icon-size: 18px;
+
+      @include size($icon-size, $icon-size);
+      @include icon-bg-png(call-mini);
+
+      content: "";
+      margin-right: 14px;
+    }
+  }
+}

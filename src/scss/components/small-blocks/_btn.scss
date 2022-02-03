@@ -1,0 +1,73 @@
+.btn {
+  position: relative;
+  color: $color-white;
+
+  &__text {
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: $color-white;
+
+    &--request {
+      @include flex-all-center;
+
+      &::after {
+        @include size(12px, 10px);
+        @include icon-bg-png(right-arrow-btn);
+
+        content: "";
+        margin-left: 12px;
+      }
+    }
+  }
+
+  &--primary {
+    @include size(320px, 90px);
+    @include figured-block(4%, 46%);
+
+    box-shadow: 0 4px 0 #331cb4, inset 0 0 8px rgba(158, 138, 225, 1);
+    background-image: linear-gradient(to top, #291a91 0%, #6f44f9 100%);
+
+    &:hover {
+      box-shadow: 0 3px 0 #4626b9, inset 0 0 24px rgba(130, 96, 244, 0.35);
+      background-image: linear-gradient(to top, #6f44f9 0%, #291a91 100%);
+    }
+
+    &:active {
+      box-shadow: inset 0 0 24px rgba(130, 96, 244, 0.35);
+      background-image: linear-gradient(to top, #6f44f9 0%, #291a91 100%);
+    }
+
+    @include mobile {
+      width: 272px;
+      height: 81px;
+    }
+  }
+
+  &--request {
+    @include flex-all-center;
+  }
+}
+
+button#test {
+  position: relative;
+  margin: 20px 0;
+  border-radius: 4% / 24%;
+  width: 320px;
+  height: 90px;
+  text-align: center;
+  text-indent: 0.1em;
+  color: white;
+  background: red;
+}
+
+button#test::before {
+  content: "";
+  position: absolute;
+  left: -1%;
+  right: -1%;
+  top: 10%;
+  bottom: 10%;
+  border-radius: 3% / 56%;
+  background: inherit;
+}

@@ -1,0 +1,177 @@
+.big-bg {
+  @include big-bg(big-bg--home-top1);
+
+  height: auto;
+
+  @include mobile {
+
+  }
+
+  @include media-max(1750) {
+    background-size: cover;
+  }
+
+  &--home-second {
+    @include big-bg(big-bg--home-second);
+
+    height: 2280px;
+
+    @include media-max(1650) {
+      background-size: cover;
+    }
+    @include tablet {
+      height: 100%;
+    }
+    @include mobile {
+      background: #000;
+    }
+  }
+
+  &--home-bottom {
+    //background-image: url("../img/big-bg/big-bg--home-bottom.png");
+    background-image: url("../img/big-bg/big-bg-about2.png");
+
+    height: 1777px;
+
+    @include media-max(720) {
+      background: #000;
+      height: auto;
+    }
+  }
+
+  &-contact {
+    background-image: url("../img/big-bg/big-bg-contacts.png");
+
+    @include media-max(768) {
+     background: #000;
+      object-fit: contain;
+      background-position: center;
+    }
+  }
+
+  &--about-top {
+    background-image: url("../img/big-bg/big-bg--about-top.png");
+
+    height: 1400px;
+
+    @include mobile {
+      min-height: 1078px;
+    }
+
+    @include media-max(520) {
+      background-size: cover;
+      background-image: url("../img/big-bg/big-bg--about-top-mobile.png");
+    }
+  }
+
+  &--bookmaker-header {
+    background-image: url("../img/big-bg/big-bg--bookmaker-header.png");
+
+    height: 1400px;
+
+    @include media-max(520) {
+      background: url("../img/big-bg/bg-mob1.png") #000;
+      height: 1064px;
+      background-position-y: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &--portfolio {
+    @include big-bg(big-bg--portfolio);
+
+    height: 2580px;
+
+    @include media-max(1700) {
+      background-size: cover;
+      height: auto;
+    }
+
+    @include tablet {
+      height: auto;
+      background: #000;
+    }
+  }
+
+  &--casino-top {
+    @include big-bg(big-bg--casino-top);
+
+    height: 1400px;
+
+    @include cover;
+    @include tablet {
+      height: 862px;
+    }
+    @include media-max(520) {
+      @include big-bg(big-mob2);
+      height: 870px;
+      background-position-y: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &--casino-bottom {
+    //@include big-bg(big-bg--casino-bottom);
+    @include big-bg(test-big-bg);
+
+    min-height: 2300px;
+
+    @include cover;
+    @include tablet {
+      //@include big-bg(12-layers);
+      //min-height: 3350px;
+    }
+    @include media-max(768) {
+      background: #000;
+    }
+
+  }
+
+
+  &--bookmaker-bottom {
+    background-image: url("../img/big-bg/big-bg--bookmaker-bottom.png");
+    position: relative;
+
+    @include media-max(520) {
+      background: #000;
+    }
+
+
+    &:before {
+      content: '';
+      position: absolute;
+      background-image: url(../img/parallax/ball.png);
+      width: 1040px;
+      height: 700px;
+      top: -100px;
+      left: 0;
+      background-repeat: no-repeat;
+
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+  &.big-bg-contact .contacts {
+
+    @include tablet {
+      padding-top: 70px;
+    }
+
+    @include mobile {
+      padding-top: 45px;
+    }
+  }
+}
+
+
+.big-bg-index {
+
+  @include mobile {
+    background: #000;
+  }
+}
+

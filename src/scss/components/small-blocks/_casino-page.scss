@@ -1,0 +1,121 @@
+.casino-page {
+
+  .bookmaker__parallax-item1 {
+    left: 0;
+
+    @include mobile {
+      right: 0;
+      left: auto;
+    }
+  }
+
+  .business {
+    @include mobile {
+      padding-top: 30px;
+    }
+  }
+
+  .scroll-hint__text {
+    @include mobile {}
+    display: none;
+  }
+
+  .hero__inner-casino-page {
+    .hero__parallax-item--about-page {
+      right: 200px;
+      top: -55px;
+    }
+  }
+
+  .advantages--casino-page {
+    @include tablet {
+      padding: 45px 20px;
+    }
+
+    .advantages__title {
+      max-width: 950px;
+    }
+
+    .advantages__parallax-item3 {
+      @include media-max(1450) {
+        width: 30%;
+      }
+      @include tablet {
+        display: none;
+      }
+    }
+
+    .advantages-list {
+      @include tablet {
+        grid-gap: 60px;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 45px;
+      }
+      @include mobile {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    .advantage-item {
+
+      @include mobile {
+        text-align: center;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+    }
+
+    .advantage-item__title {
+      @include mobile {
+        margin: 20px 0 16px;
+        font-size: 23px;
+      }
+    }
+  }
+
+  .price__casino-page {
+    padding-bottom: 0;
+
+    .business__inner {
+      max-width: 558px;
+    }
+  }
+
+  .business__parallax-item1 {
+    display: none;
+  }
+
+  .hero__parallax-item--casino-page {
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  .hero__action-block--casino-page {
+    position: relative;
+
+    .hero__parallax-item--casino-page-mob {
+      display: none;
+      left: -30px;
+      top: -45px;
+      width: 30%;
+
+      @include mobile {
+        display: block;
+      }
+    }
+
+    .hero__parallax-item--casino-page-mob2 {
+      margin-top: 60px;
+      display: none;
+      right: 0px;
+      top: -110px;
+      width: 20%;
+
+      @include mobile {
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+<!-- Modal example -->
+<div class="modal" id="example-modal" aria-hidden="true">
+  <div class="modal__overlay">
+    <div class="modal__container modal__container--text">
+      <button class="btn modal__btn-close">
+        <svg>
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </button>
+      <div class="modal__content">
+        <h1 class="section-title modal-title">Оставьте заявку</h1>
+        <div class="modal-subtitle">Оставьте заявку на сайте и наш менеджер
+          в ближашее время Вам перезвонит</div>
+
+      <div class="custom-field custom-field--input-name contacts-form__input-wrap">
+        <input type="text" name="name" class="custom-field__input" placeholder="Введите Ваше имя">
+      </div>
+      <div class="custom-field custom-field--input-tel contact-form__input-wrap">
+        <input type="tel" name="tel" class="custom-field__input" placeholder="Введите Ваш телефон">
+      </div>
+      <button class="btn btn--primary btn--primary btn--request js-open-modal" data-modal="example-modal">
+        <span class="btn__text btn__text--request">Оставить заявку</span>
+      </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal example end -->

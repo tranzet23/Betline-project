@@ -1,0 +1,152 @@
+.advantages__form {
+  border-radius: 7px;
+  background-color: #fff;
+  padding: 7px 7px 8px 8px;
+  margin-top: -90px;
+  z-index: 3;
+  box-shadow: 0 5px 7px rgba(0 ,0 ,0 , 0.02), 0 3px 3px rgba(0, 0, 0, 0.03);
+
+  @include tablet{
+    margin-top: 0;
+    padding: 0;
+  }
+
+  input:focus {
+    color: $color-black;
+  }
+
+  &--inner {
+    border: 1px solid #f5f5f5;
+    border-radius: 7px;
+    padding: 62px 62px 40px 62px;
+
+    @include media-max(1200) {
+      padding: 34px 20px 38px 20px;
+    }
+
+
+    @include tablet {
+      padding: 34px 44px 38px 44px;
+      border: none;
+    }
+  }
+
+  &--title {
+    color: #090909;
+    font-size: 32px;
+    line-height: 60px;
+    font-weight: 600;
+
+    @include tablet {
+      font-size: 25px;
+      line-height: 35px;
+    }
+
+    @include mobile {
+      font-size: 23px;
+      text-align: center;
+    }
+  }
+
+  &--radio-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+
+    @include media-max(1050) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &--radio-item {
+    height: 40px;
+
+    @include mobile{
+      height: auto;
+      margin-bottom: 5px;
+    }
+  }
+
+  &--text {
+    color: #090909;
+    font-size: 17px;
+    line-height: 23px;
+  }
+
+  &--block {
+    padding-bottom: 30px;
+
+    @include mobile{
+      padding-bottom: 20px;
+      max-width: 320px;
+      margin: 0 auto;
+    }
+
+    input {
+      color: $color-black;
+      font-size: 17px;
+    }
+
+    .btn__text--request::after {
+      display: none;
+    }
+
+    &--inner {
+      display: flex;
+      justify-content: space-between;
+
+      @include tablet {
+        flex-direction: column;
+      }
+      @include mobile {
+        align-items: center;
+      }
+    }
+
+    &-mini {
+      display: flex;
+      flex-direction: column;
+      padding-top: 40px;
+
+      @include mobile {
+        padding-top: 10px;
+      }
+
+      &--inner {
+        display: flex;
+        align-items: center;
+      }
+
+      &--text {
+        color: #a7a5a5;
+        font-size: 17px;
+        line-height: 28px;
+      }
+
+      &--img {
+        margin-right: 10px;
+
+        &-user {
+          margin-right: 18px;
+        }
+      }
+    }
+  }
+  &-input {
+    border-bottom: 1px solid #e2e2e2;
+    width: 100%;
+    outline: none;
+    color: #000;
+  }
+
+  label.advantages__form--text {
+
+    @include media-max(520){
+
+    }
+  }
+}

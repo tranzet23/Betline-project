@@ -1,0 +1,75 @@
+.maintenance {
+  padding-top: 260px;
+
+  @include mobile {
+    padding-top: 20px;
+  }
+
+  &__list {
+    display: grid;
+    grid-gap: 30px;
+    grid-row-gap: 50px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 50px;
+
+    @include tablet {
+      grid-template-columns: repeat(1, 1fr);
+      grid-row-gap: 0;
+    }
+  }
+
+  &__title {
+     @include tablet {
+       text-align: center;
+     }
+  }
+
+}
+
+.maintenance-card {
+  position: relative;
+  padding: 35px 40px;
+  min-height: 225px;
+  background-image: url("#{$images-path--root}border.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @include tablet  {
+    background-image: none;
+    text-align: center;
+    min-height: auto;
+    padding-bottom: 45px;
+    padding-top: 0;
+  }
+
+
+  &__count {
+    font-family: "Stem", sans-serif;
+    font-weight: 700;
+    font-size: 27px;
+    background-image: linear-gradient(to top, #291a91 0%, #6f44f9 100%);
+    background-clip: text;
+    color: #7c56ec;
+
+    @include tablet {
+      font-size: 23px;
+    }
+  }
+
+  &__title {
+    font-size: 25px;
+    margin: 16px 0;
+
+    @include tablet {
+      font-size: 23px;
+    }
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 23px;
+    color: #747474;
+    font-weight: 400;
+
+  }
+}

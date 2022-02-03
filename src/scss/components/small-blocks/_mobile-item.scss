@@ -1,0 +1,16 @@
+.mobile-item--price-inner {
+  margin-left: -25px;
+  display: none;
+
+  img {
+    width: 100%;
+  }
+
+  @include media-max(720) {
+    display: block;
+  }
+}
+
+.margin-top-mobile {
+  margin-top: 20px;
+}

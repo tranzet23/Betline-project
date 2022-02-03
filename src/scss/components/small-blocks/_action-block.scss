@@ -1,0 +1,47 @@
+.action-block {
+  @include flex-all-center;
+  @include size(630px, 150px);
+  @include figured-block(4%, 50%);
+
+  padding: 10px 30px;
+  box-shadow: 0 17px 54px rgba(0, 0, 0, 0.17), inset 0 -1px 0 rgba(255, 255, 255, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.05), inset 1px 0 0 rgba(255, 255, 255, 0.05), inset -1px 0 0 rgba(255, 255, 255, 0.05), inset 0 0 16px rgba(255, 250, 227, 0.05);
+  background-color: rgba(11, 24, 33, 0.5);
+  backdrop-filter: blur(6px);
+  position: relative;
+
+
+  @include mobile {
+    padding: 40px 30px;
+  }
+
+  &__text {
+    margin-right: 35px;
+    max-width: 190px;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: -0.36px;
+
+    @include mobile {
+      margin-right: 0;
+      margin-top: 25px;
+      font-size: 16px;
+    }
+  }
+}
+
+.hero__action-block {
+
+
+  &:before {
+    @include mobile {
+      content: '';
+      background-image: url(../img/2-layers-mob.png);
+      position: absolute;
+      width: 80%;
+      height: 260px;
+      z-index: 2;
+      right: -160px;
+      top: -70px;
+    }
+  }
+}

@@ -1,0 +1,105 @@
+.about {
+  margin-top: 460px;
+  padding-bottom: 180px;
+
+  @include mobile {
+    margin-top: 55px;
+    padding-bottom: 0px;
+  }
+
+  &__block {
+    position: relative;
+    border-radius: 6px;
+    padding: 60px 168px 60px 70px;
+    height: 368px;
+    max-width: 750px;
+    background-image: url("#{$images-path--root}about-block-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    //:after {
+    //  content: '';
+    //  position: absolute;
+    //  background-image: url("");
+    //}
+
+    @include mobile {
+      width: 330px;
+      margin: 0 auto;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      background-image: url(../img/ruka.png);
+      background-repeat: no-repeat;
+      width: 899px;
+      height: 800px;
+      right: -720px;
+      top: -140px;
+
+      @include mobile {
+        display: none;
+      }
+    }
+    @include mobile {
+      background-image: url("#{$images-path--root}about-block-bg-mob.png");
+      padding: 36px 31px 31px 31px;
+      height: 428px;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    color: $color-black;
+  }
+
+  &__text {
+    position: relative;
+    margin-top: 30px;
+    padding-left: 30px;
+    font-size: 17px;
+    line-height: 27px;
+    color: $color-gray-light;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 7px;
+      width: 2px;
+      height: 39px;
+      background-color: $color-primary;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    @include mobile {
+      font-size: 16px;
+      padding-left: 0;
+      margin-top: 17px;
+    }
+  }
+
+ &__ruka-inner {
+   margin-top: 30px;
+   width: 100%;
+   height: 450px;
+   display: none;
+
+   @include mobile {
+     display: block;
+   }
+
+   @include media-max(450) {
+     height: 320px;
+   }
+ }
+
+  &__ruka {
+    margin-left: 100px;
+  }
+
+}

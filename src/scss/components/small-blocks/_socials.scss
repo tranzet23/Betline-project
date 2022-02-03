@@ -1,0 +1,60 @@
+.socials {
+  &__block {
+    @include flex-all-center;
+    @include figured-block(3.5%);
+    @include size(233px, 54px);
+
+    box-shadow:
+      0 17px 54px rgba(0, 0, 0, 0.17),
+      inset 0 -1px 0 rgba(255, 255, 255, 0.05),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05),
+      inset 1px 0 0 rgba(255, 255, 255, 0.05),
+      inset -1px 0 0 rgba(255, 255, 255, 0.05),
+      inset 0 0 16px rgba(255, 250, 227, 0.05);
+
+
+    @include media-max(450) {
+      @include size(180px, 42px);
+    }
+  }
+
+  &__list {
+    @include flex-v-center;
+  }
+
+  &__icon {
+    @include size(24px, 24px);
+
+    margin: 0 8px;
+    fill: $color-white;
+    opacity: 0.2;
+    transition: $transition-hover;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &--twitter {
+      @include size(26px, 21px);
+    }
+
+    &--fb {
+      @include size(20px, 26px);
+    }
+
+    &--vk {
+      @include size(26px, 25px);
+    }
+
+    &--inst {
+      @include size(26px, 26px);
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    letter-spacing: -0.28px;
+    text-transform: uppercase;
+    color: $color-gray-light;
+  }
+}

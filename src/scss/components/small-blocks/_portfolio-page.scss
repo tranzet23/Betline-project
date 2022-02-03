@@ -1,0 +1,71 @@
+.portfolio-page--wrap {
+
+  .portfolio__inner {
+    padding-top: 100px;
+
+    @include mobile {
+      padding-top: 70px;
+    }
+  }
+
+  .portfolio__title {
+    color: $color-white2;
+    margin-bottom: 35px;
+  }
+
+  .portfolio-slider__slide.swiper-slide-next::before, .portfolio-slider__slide.swiper-slide-prev::before {
+    background-color: rgba(0, 0, 0, 0.51);
+  }
+
+
+  .portfolio-slider__slide.swiper-slide:not(.swiper-slide-active):not(.swiper-slide-next):not(.swiper-slide-prev)::before {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .portfolio-slider__btn--prev, .portfolio-slider__btn--next {
+    box-shadow: 0 2px 0 #1e1e1e, inset 0 0 2px rgba(255, 255, 255 , 0.10);
+    background-color: #010101;
+    background-image: linear-gradient(to top, #363636 0%, #0c0c0c 100%);
+  }
+
+  .portfolio-slider__btn--prev:hover, .portfolio-slider__btn--next:hover  {
+    box-shadow: 0 2px 0 #331cb4, inset 0 0 24px rgba(130, 96, 244, 0.35);
+    background-color: #010101;
+    background-image: linear-gradient(to top, #291a91 0%, #6f44f9 100%);
+  }
+
+  .btn--primary, .business__parallax-item1, .portfolio__parallax-item1, .portfolio__parallax-item2  {
+    display: none;
+  }
+
+  .business {
+    padding-top: 100px;
+    padding-bottom: 150px;
+
+    @include mobile {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  .contacts {
+    padding-top: 200px;
+
+    @include mobile {
+      padding-top: 0;
+    }
+  }
+  .top-wrapper {
+    @include mobile {
+      min-height: auto;
+      height: 100%;
+    }
+  }
+
+  .portfolio {
+
+    @include mobile {
+      height: 590px;
+    }
+  }
+}

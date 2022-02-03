@@ -1,0 +1,144 @@
+// -----FONTS-----
+@mixin font-face($font-family, $url, $weight, $style) {
+  @font-face {
+    src: url("../fonts/#{$url}.woff2") format("woff2");
+    font-family: "#{$font-family}";
+    font-weight: #{$weight};
+    font-style: $style;
+    font-display: swap;
+  }
+}
+
+@mixin amsterdam {
+  font-family: "Amsterdam", sans-serif;
+}
+
+// -----BREAKPOINTS-----
+
+@mixin media-min($width) {
+  @media (min-width: (#{$width}px)) {
+    @content;
+  }
+}
+
+@mixin media-max($width) {
+  @media (max-width: (#{$width}px)) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: (1025px)) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: (1024px)) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: (768px)) {
+    @content;
+  }
+}
+
+// -----BASE-----
+
+@mixin icon-bg-png($name) {
+  background-image: url("#{$images-path--root}#{$name}.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@mixin bg-cover {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin flex {
+  display: flex;
+}
+
+@mixin flex-v-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-h-center {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-all-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-all-sb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin after-before-cover {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+@mixin absolute-h-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin absolute-v-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin relative-v-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin cover {
+  @include media-max(1700) {
+    background-size: cover;
+  }
+}
+
+@mixin iphone-size {
+  @include media-max(520px) {
+
+  }
+}
+
+// -----FOR CURRENT-----
+
+@mixin big-bg($name) {
+  $image-path: $images-path--root + "big-bg/";
+
+  background: url("#{$image-path}#{$name}.png") no-repeat center;
+  background-size: 100% 100%;
+}
+
+@mixin figured-block($val1, $val2: 50%) {
+  border-radius: #{$val1} / #{$val2};
+}
